@@ -1,5 +1,5 @@
 const container = document.getElementById('container')
-const squares = 500
+const squares = 1024
 
 for(let i = 0; i < squares; i++){
 	const square = document.createElement('div')
@@ -11,8 +11,12 @@ for(let i = 0; i < squares; i++){
 
 	square.addEventListener('click', removeEventListener)
 
+	square.addEventListener('dblclick', resetEventListener)
+
 	container.appendChild(square)
 }
+
+
 
 function setColor() {
 	const color = randomColor()
@@ -34,4 +38,10 @@ function removeEventListener() {
 	this.removeEventListener('mouseover', setColor)
 	this.removeEventListener('mouseout', removeColor)
 	this.removeEventListener('click', removeEventListener)
+}
+
+function resetEventListener() {
+	this.addEventListener('mouseover', setColor)
+	this.addEventListener('mouseout', removeColor)
+	this.addEventListener('click', removeEventListener)
 }
