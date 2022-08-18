@@ -7,21 +7,21 @@
 	<title>Pixxel Panel</title>
 </head>
 <body>
-	<div class="ct" id="t1">
-		<div class="ct" id="t2">
-			<div class="ct" id="t3">
+	<div class="pages" id="panel">
+		<div class="pages" id="conf">
+			<div class="pages" id="me">
 				<ul id="menu">
-					<a href="#t1">
+					<a href="#panel">
 						<li class="icon" id="uno">
 							<img src="assets\board.png" height="48px" width="48px">
 						</li>
 					</a>
-					<a href="#t2">
+					<a href="#conf">
 						<li class="icon" id="dos">
 							<img src="assets\settings.png" height="48px" width="48px">
 						</li>
 					</a>
-					<a href="#t3">
+					<a href="#me">
 						<li class="icon" id="tres">
 							<img src="assets\user.png" height="52px" width="52px">
 						</li>
@@ -34,7 +34,50 @@
 				</div>
 				<div class="page" id="p2">
 					<section class="icon">
-						<span class="title">Configuration</span>
+						<div>
+							<label for="col">Columns: <span id="demo1"></span><br></label>
+							<input type="range" min="1" max="32" id="col" value="16" class="slider">
+						</div>
+						<div>
+							<label for="row">Rows: <span id="demo2"></span><br></label>
+							<input type="range" min="1" max="32" id="row" value="16" class="slider">
+						</div>
+						<div>
+							<label for="toggle">Are the colors randomized?</label>
+							<div class="checkbox">
+								<input type="checkbox" id="toggle" class="chec" checked>
+								<label for="toggle" class="switch"></label>
+							</div>
+							<div id="raindiv" style="display: none;">
+								<label for="paint">Choose your color: </label>
+								<input type="color" value="#ffffff" id="paint">
+							</div>
+						</div>
+						<div>
+							<label for="toggle2">Do colors fade away?</label>
+							<div class="checkbox">
+								<input type="checkbox" id="toggle2" class="chec" checked>
+								<label for="toggle2" class="switch"></label>
+							</div>
+							<div id="timediv" style="display: block;">
+								<label for="time">After how long: <span id="demo3"></span><br></label>
+								<input type="range" min="1" max="10" id="time" value="2" class="slider">
+							</div>
+						</div>
+						<div>
+							<label for="toggle3">Do colors stay permanently on hover?</label>
+							<div class="checkbox">
+								<input type="checkbox" id="toggle3" class="chec">
+								<label for="toggle3" class="switch"></label>
+							</div>
+						</div>
+						<div>
+							<label for="toggle4">Reset permanent color blocks (on hover)</label>
+							<div class="checkbox">
+								<input type="checkbox" id="toggle4" class="chec">
+								<label for="toggle4" class="switch"></label>
+							</div>
+						</div>
 					</section>
 				</div>
 				<div class="page" id="p3">
